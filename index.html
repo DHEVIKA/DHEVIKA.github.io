@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Dhevika | Portfolio | AI/ML & Full Stack Developer</title>
+  <meta name="description" content="Portfolio of M Dhevika, AI/ML & Full Stack Developer with AWS Cloud Solutions Architect certification. Finalist in Google Agentic AI Hackathon, patent holder, and GSSOC contributor.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Dynamic Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">&lt;</span>Dhevika<span class="logo-accent"> /&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm resume-btn" onclick="openResumeModal()">
+          <i class="fa-solid fa-file-pdf"></i> Resume
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#timeline" class="mobile-nav-link">Timeline</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      <li>
+        <button class="btn btn-primary btn-full resume-btn" onclick="openResumeModal()">
+          <i class="fa-solid fa-file-pdf"></i> View Resume
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge-glow">Ready to Innovate</div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">M Dhevika</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          I'm a <span id="typewriter" class="text-primary"></span><span class="cursor">|</span>
+        </h2>
+        <p class="hero-description">
+          An innovative AI/ML Engineer & Full Stack Developer specializing in bridging cognitive AI models with scalable, cloud-native backend infrastructures. Passionate about automated intelligence, deep learning, and cloud-native DevOps architectures.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary btn-lg">
+            Explore Work <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary btn-lg">
+            Let's Collaborate <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card-container">
+        <div class="hero-profile-card tilt-element">
+          <div class="card-inner-glow"></div>
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="profile-info">
+              <h3>M Dhevika</h3>
+              <p>Chennai, India</p>
+              <div class="social-pills">
+                <a href="https://linkedin.com/in/dhevika-m-54636825a" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/DHEVIKA" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/thedhevika/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="profile-divider"></div>
+          
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="93">0</span><span class="stat-suffix">%</span>
+              <span class="stat-label">Model Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="60">0</span><span class="stat-suffix">%</span>
+              <span class="stat-label">Effort Reduced</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">GSSOC PRs</span>
+            </div>
+          </div>
+          
+          <div class="profile-details">
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-graduation-cap"></i> B.Tech IT</span>
+              <span class="detail-value">Vel Tech (CGPA 8.4)</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-shield-halved"></i> Cloud</span>
+              <span class="detail-value">AWS Solutions Architect</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Stats Summary Section -->
+  <section id="about" class="about-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="section-subtitle">Blending AI Research with Practical Full-Stack Architectures</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-card glass-panel">
+          <h3>Who I Am</h3>
+          <p>
+            I am a B.Tech Information Technology graduate (Class of 2025) with a strong foundation in software engineering and cloud deployment. My technical journey spans building advanced Deep Learning algorithms for healthcare, developing natural language processing agents for education, and architecting microservices that streamline manual business tasks.
+          </p>
+          <p>
+            I thrive in hackathons and open-source ecosystems, having been recognized as a finalist in the <strong>Google Agentic AI Hackathon 2025</strong> and actively contributing code to repositories via the <strong>GirlScript Summer of Code</strong>. My objective is to build intelligent web applications that are robust, highly performant, and seamlessly scalable on the cloud.
+          </p>
+          <div class="quick-facts">
+            <div class="fact-item"><i class="fa-solid fa-lightbulb text-primary"></i> Patent Filed (Neuro Fusion)</div>
+            <div class="fact-item"><i class="fa-solid fa-trophy text-emerald"></i> Best Paper Award (Saveetha University)</div>
+            <div class="fact-item"><i class="fa-solid fa-cloud text-blue"></i> AWS Certified Professional</div>
+          </div>
+        </div>
+
+        <div class="about-highlights-grid">
+          <div class="highlight-card glass-panel text-center hover-glow">
+            <div class="highlight-icon icon-ai"><i class="fa-solid fa-brain"></i></div>
+            <h4>Artificial Intelligence</h4>
+            <p>Developing CNNs, NLP pipelines, and integrating Hugging Face model APIs into functional applications.</p>
+          </div>
+          <div class="highlight-card glass-panel text-center hover-glow">
+            <div class="highlight-icon icon-cloud"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <h4>DevOps & Cloud</h4>
+            <p>Architecting secure networks on AWS (VPC, EC2, S3, RDS) and orchestrating container environments using Docker.</p>
+          </div>
+          <div class="highlight-card glass-panel text-center hover-glow">
+            <div class="highlight-icon icon-code"><i class="fa-solid fa-server"></i></div>
+            <h4>Full-Stack Backend</h4>
+            <p>Designing REST APIs using Django and Flask, coupled with robust SQL databases (PostgreSQL, MySQL).</p>
+          </div>
+          <div class="highlight-card glass-panel text-center hover-glow">
+            <div class="highlight-icon icon-algo"><i class="fa-solid fa-diagram-project"></i></div>
+            <h4>System Architecture</h4>
+            <p>Applying advanced Object Oriented Programming concepts and Data Structures for optimized problem solving.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">My toolbox for building scalable modern solutions</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-category-card glass-panel">
+          <div class="category-header">
+            <i class="fa-solid fa-code-branch text-primary"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>C++</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Python</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Java</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>SQL</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="skill-category-card glass-panel">
+          <div class="category-header">
+            <i class="fa-solid fa-cubes text-emerald"></i>
+            <h3>Frameworks & ML</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Django & Flask</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>TensorFlow & Deep Learning</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Scikit-learn</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Pandas & NumPy</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-category-card glass-panel">
+          <div class="category-header">
+            <i class="fa-solid fa-cloud-sun text-blue"></i>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>AWS Services (EC2, S3, RDS, VPC)</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Docker Containerization</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>CI/CD & DevOps (Udemy Certified)</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="70%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Git & Version Control</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases & Core Concepts -->
+        <div class="skill-category-card glass-panel">
+          <div class="category-header">
+            <i class="fa-solid fa-database text-purple"></i>
+            <h3>Databases & Concepts</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>PostgreSQL & MySQL</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Data Structures & Algorithms</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>OOPs & System Design</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>REST APIs Integration</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Timeline Section -->
+  <section id="timeline" class="timeline-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Academic & Professional Journey</h2>
+        <p class="section-subtitle">A chronological track record of education and work experience</p>
+      </div>
+
+      <div class="timeline-tabs">
+        <button class="tab-btn active" onclick="switchTimeline('experience')">
+          <i class="fa-solid fa-briefcase"></i> Professional Experience
+        </button>
+        <button class="tab-btn" onclick="switchTimeline('education')">
+          <i class="fa-solid fa-graduation-cap"></i> Academic Education
+        </button>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="timeline-container active" id="timeline-experience">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item left scroll-reveal">
+          <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="timeline-card glass-panel hover-glow">
+            <div class="timeline-card-header">
+              <span class="timeline-date">Aug 2022 - Jan 2023</span>
+              <h3>AI/ML & Full Stack Developer Intern</h3>
+              <h4 class="company">EduReka <span class="badge">Remote</span></h4>
+            </div>
+            <div class="timeline-body">
+              <p>Designed and integrated intelligent features and backend APIs within a scalable web ecosystem.</p>
+              <ul>
+                <li><strong>AI Powered App Dev:</strong> Built Django systems for smart automation and data parsing.</li>
+                <li><strong>ML Integration:</strong> Deployed Scikit-learn predictive models to yield business insights.</li>
+                <li><strong>Cloud Deployment:</strong> Scaled infrastructure on AWS EC2 & S3, optimizing asset load speeds.</li>
+                <li><strong>RESTful Backend:</strong> Developed secure session management and database models.</li>
+              </ul>
+              <div class="tag-container">
+                <span class="tag">Django</span>
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">AWS</span>
+                <span class="tag">REST API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right scroll-reveal">
+          <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+          <div class="timeline-card glass-panel hover-glow">
+            <div class="timeline-card-header">
+              <span class="timeline-date">April 2026 - Present</span>
+              <h3>Open Source Developer</h3>
+              <h4 class="company">GirlScript Summer of Code (GSSOC 2026)</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Contributing core codebase improvements to diverse open-source software projects.</p>
+              <ul>
+                <li>Collaborated on active repositories with 5+ merged pull requests addressing functional enhancements.</li>
+                <li>Participated in code reviews, optimizing algorithms, and documenting setup methodologies.</li>
+              </ul>
+              <div class="tag-container">
+                <span class="tag">Git</span>
+                <span class="tag">Open Source</span>
+                <span class="tag">Collaboration</span>
+                <span class="tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="timeline-container" id="timeline-education">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item left">
+          <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="timeline-card glass-panel hover-glow">
+            <div class="timeline-card-header">
+              <span class="timeline-date">2021 - 2025</span>
+              <h3>Bachelor of Technology - Information Technology</h3>
+              <h4 class="company">Vel Tech Dr. Rangarajan Dr. Sakunthala Engineering College</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Core focus on foundational computer science elements, networks, and advanced scripting technologies.</p>
+              <p><strong>Cumulative CGPA:</strong> 8.4 / 10</p>
+              <div class="tag-container">
+                <span class="tag">Data Structures</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">Cloud Architecture</span>
+                <span class="tag">DBMS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+          <div class="timeline-card glass-panel hover-glow">
+            <div class="timeline-card-header">
+              <span class="timeline-date">2021</span>
+              <h3>Higher Secondary Education (12th Grade)</h3>
+              <h4 class="company">St. Joseph's Girls' Hr. Sec School <span class="badge">Dindigul</span></h4>
+            </div>
+            <div class="timeline-body">
+              <p>Concentrated in Mathematics, Physics, Chemistry, and Computer Science.</p>
+              <p><strong>Percentage Achieved:</strong> 88.23%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+          <div class="timeline-card glass-panel hover-glow">
+            <div class="timeline-card-header">
+              <span class="timeline-date">2019</span>
+              <h3>Secondary School Education (10th Grade)</h3>
+              <h4 class="company">St. Joseph's Girls' Hr. Sec School <span class="badge">Dindigul</span></h4>
+            </div>
+            <div class="timeline-body">
+              <p>General secondary education board curriculum.</p>
+              <p><strong>Percentage Achieved:</strong> 89%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world systems engineered with advanced tech stacks</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-panel tilt-element" onclick="openProjectModal('neuro-fusion')">
+          <div class="project-image-placeholder">
+            <i class="fa-solid fa-dna project-main-icon"></i>
+            <div class="project-glow-layer" style="background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);"></div>
+            <div class="project-badge"><i class="fa-solid fa-ribbon"></i> Patent & Award</div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Computer Vision / Healthcare</span>
+            <h3>Neuro Fusion</h3>
+            <p>Advancing Brain Tumor analysis with Deep CNNs. Achieved 93% accuracy on MRI datasets with a Django dashboard interface.</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>Django</span>
+              <span>Deep Learning</span>
+            </div>
+            <span class="read-more">Learn details <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-panel tilt-element" onclick="openProjectModal('sahayak')">
+          <div class="project-image-placeholder">
+            <i class="fa-solid fa-robot project-main-icon text-emerald"></i>
+            <div class="project-glow-layer" style="background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, transparent 70%);"></div>
+            <div class="project-badge badge-emerald"><i class="fa-solid fa-trophy"></i> Google Finalist</div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">GenAI / EdTech</span>
+            <h3>Sahayak</h3>
+            <p>Multilingual learning assistant built during the Google Agentic AI Hackathon 2025. Generates automated school lessons and quizzes.</p>
+            <div class="project-tags">
+              <span>NLP</span>
+              <span>Flask</span>
+              <span>Docker</span>
+              <span>AWS</span>
+              <span>Python</span>
+            </div>
+            <span class="read-more">Learn details <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-panel tilt-element" onclick="openProjectModal('meeting-summarizer')">
+          <div class="project-image-placeholder">
+            <i class="fa-solid fa-list-check project-main-icon text-blue"></i>
+            <div class="project-glow-layer" style="background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);"></div>
+            <div class="project-badge badge-blue"><i class="fa-solid fa-bolt"></i> 60% Effort Save</div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">NLP / Productivity</span>
+            <h3>Meeting Summarizer</h3>
+            <p>AI summarization tool processing 500+ users. Leveraged Hugging Face API pipelines with REST integration to shorten work schedules.</p>
+            <div class="project-tags">
+              <span>Hugging Face</span>
+              <span>Flask</span>
+              <span>NLP</span>
+              <span>REST APIs</span>
+            </div>
+            <span class="read-more">Learn details <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements & Certifications Section -->
+  <section id="achievements" class="achievements-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Certifications & Achievements</h2>
+        <p class="section-subtitle">Validating knowledge and architectural excellence</p>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Google Agentic Hackathon -->
+        <div class="achievement-card glass-panel hover-glow">
+          <div class="achievement-header">
+            <div class="achievement-icon icon-gold"><i class="fa-solid fa-trophy"></i></div>
+            <div class="achievement-meta">
+              <h4>Hackathon Finalist</h4>
+              <span class="issuer">Google Agentic AI Hackathon 2025</span>
+            </div>
+          </div>
+          <p>Led "Sahayak" project to the final rounds of the Google Hackathon, prototyping conversational learning systems for remote classes.</p>
+        </div>
+
+        <!-- Best Paper Award -->
+        <div class="achievement-card glass-panel hover-glow">
+          <div class="achievement-header">
+            <div class="achievement-icon icon-gold"><i class="fa-solid fa-award"></i></div>
+            <div class="achievement-meta">
+              <h4>Best Paper Award</h4>
+              <span class="issuer">Saveetha University (IC 2025)</span>
+            </div>
+          </div>
+          <p>Awarded Best Scientific Paper for "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture" at Saveetha University's International Conference.</p>
+        </div>
+
+        <!-- AWS Solutions Architect -->
+        <div class="achievement-card glass-panel hover-glow">
+          <div class="achievement-header">
+            <div class="achievement-icon icon-aws"><i class="fa-brands fa-aws"></i></div>
+            <div class="achievement-meta">
+              <h4>AWS Solutions Architect</h4>
+              <span class="issuer">CADDCAMM SOLUTIONS</span>
+            </div>
+          </div>
+          <p>Certified in architecting robust, secure, and decoupled services utilizing standard AWS Cloud patterns (VPC, IAM, SNS, RDS).</p>
+        </div>
+
+        <!-- AWS Cloud Practitioner -->
+        <div class="achievement-card glass-panel hover-glow">
+          <div class="achievement-header">
+            <div class="achievement-icon icon-aws"><i class="fa-brands fa-aws"></i></div>
+            <div class="achievement-meta">
+              <h4>AWS Cloud Practitioner</h4>
+              <span class="issuer">Amazon Web Services</span>
+            </div>
+          </div>
+          <p>Certified in cloud concepts, core security pillars, pricing guidelines, and overall platform infrastructures.</p>
+        </div>
+
+        <!-- DevOps Certification -->
+        <div class="achievement-card glass-panel hover-glow">
+          <div class="achievement-header">
+            <div class="achievement-icon icon-devops"><i class="fa-solid fa-infinity"></i></div>
+            <div class="achievement-meta">
+              <h4>DevOps Implementation</h4>
+              <span class="issuer">Udemy (Abhishek Veeramalla)</span>
+            </div>
+          </div>
+          <p>Deep-dive training covering Docker containerization, Kubernetes clusters, Jenkins pipelines, and Ansible scripts.</p>
+        </div>
+
+        <!-- Patent Filed -->
+        <div class="achievement-card glass-panel hover-glow">
+          <div class="achievement-header">
+            <div class="achievement-icon icon-patent"><i class="fa-solid fa-stamp"></i></div>
+            <div class="achievement-meta">
+              <h4>Patent Filed</h4>
+              <span class="issuer">Indian Patent Office</span>
+            </div>
+          </div>
+          <p>Officially filed patent on healthcare machine learning pipeline titled: "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture".</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section scroll-reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Let's build something exceptional together</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info-card glass-panel">
+          <h3>Contact Details</h3>
+          <p>Feel free to reach out to discuss job roles, collaborations, research projects, or open-source issues!</p>
+          
+          <div class="contact-methods">
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="method-content">
+                <span>Email</span>
+                <a href="mailto:dhevika0608@gmail.com">dhevika0608@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <div class="method-content">
+                <span>Mobile</span>
+                <a href="tel:+918248635463">+91 82486 35463</a>
+              </div>
+            </div>
+
+            <div class="method-item">
+              <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="method-content">
+                <span>Location</span>
+                <span>Chennai, Tamil Nadu, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-divider"></div>
+
+          <h3>Coding Profiles</h3>
+          <div class="coding-pills">
+            <a href="https://github.com/DHEVIKA" target="_blank" class="coding-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/dhevika-m-54636825a" target="_blank" class="coding-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://leetcode.com/u/thedhevika/" target="_blank" class="coding-pill"><i class="fa-solid fa-code"></i> LeetCode</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card glass-panel">
+          <h3>Send Message</h3>
+          <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <input type="text" id="name" required placeholder=" ">
+              <label for="name">Your Name</label>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" required placeholder=" ">
+              <label for="email">Your Email</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="subject" required placeholder=" ">
+              <label for="subject">Subject</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Message</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Send message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 M Dhevika. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="modal" id="project-modal">
+    <div class="modal-overlay" onclick="closeProjectModal()"></div>
+    <div class="modal-content glass-panel scrollbar-styled">
+      <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+      <div id="modal-project-details">
+        <!-- Content dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive & Printable Resume Modal -->
+  <div class="modal" id="resume-modal">
+    <div class="modal-overlay" onclick="closeResumeModal()"></div>
+    <div class="modal-content resume-modal-content glass-panel scrollbar-styled">
+      <button class="modal-close" onclick="closeResumeModal()">&times;</button>
+      
+      <!-- Resume Header Actions -->
+      <div class="resume-actions no-print">
+        <h3>Curriculum Vitae</h3>
+        <div class="action-buttons">
+          <button class="btn btn-primary btn-sm" onclick="printResume()">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Body -->
+      <div class="resume-print-body" id="resume-print-area">
+        <header class="resume-header-sheet">
+          <div class="header-name">
+            <h1>M DHEVIKA</h1>
+            <p class="subtitle">AI/ML & Full Stack Developer</p>
+          </div>
+          <div class="header-contacts">
+            <p><i class="fa-solid fa-envelope"></i> dhevika0608@gmail.com</p>
+            <p><i class="fa-solid fa-mobile-screen-button"></i> +91-8248635463</p>
+            <p><i class="fa-brands fa-linkedin-in"></i> linkedin.com/in/dhevika-m-54636825a</p>
+            <p><i class="fa-brands fa-github"></i> github.com/DHEVIKA</p>
+            <p><i class="fa-solid fa-code"></i> leetcode.com/u/thedhevika/</p>
+          </div>
+        </header>
+
+        <main class="resume-sheet-grid">
+          <!-- Left Column -->
+          <div class="resume-col-left">
+            <section class="resume-sheet-section">
+              <h2 class="section-sheet-title">SKILLS SUMMARY</h2>
+              <div class="skills-block">
+                <p><strong>Programming Languages:</strong> C++, Python, Java, SQL</p>
+                <p><strong>Libraries & Frameworks:</strong> Django, Flask, Scikit-learn, Pandas, NumPy, TensorFlow</p>
+                <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
+                <p><strong>Cloud Technologies:</strong> AWS (EC2, S3, VPC, RDS, SNS)</p>
+                <p><strong>Core Concepts:</strong> Data Structures & Algorithms, Object Oriented Programming, REST APIs, System Design, Git, Docker</p>
+              </div>
+            </section>
+
+            <section class="resume-sheet-section">
+              <h2 class="section-sheet-title">EDUCATION</h2>
+              <div class="education-block">
+                <div class="edu-item">
+                  <div class="edu-title">
+                    <strong>Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College</strong>
+                    <span class="date-sheet">Chennai, India</span>
+                  </div>
+                  <p>Bachelor of Technology - Information Technology; CGPA: 8.4/10 <span style="float: right; font-weight: bold;">2021 - 2025</span></p>
+                </div>
+                <div class="edu-item">
+                  <div class="edu-title">
+                    <strong>St. Joseph's Girls' Hr. Sec School</strong>
+                    <span class="date-sheet">Dindigul, India</span>
+                  </div>
+                  <p>Higher Secondary Education (12th); Percentage: 88.23% <span style="float: right; font-weight: bold;">2021</span></p>
+                </div>
+                <div class="edu-item">
+                  <div class="edu-title">
+                    <strong>St. Joseph's Girls' Hr. Sec School</strong>
+                    <span class="date-sheet">Dindigul, India</span>
+                  </div>
+                  <p>Secondary Education (10th); Percentage: 89% <span style="float: right; font-weight: bold;">2019</span></p>
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-sheet-section">
+              <h2 class="section-sheet-title">CERTIFICATIONS</h2>
+              <ul class="certifications-list-sheet">
+                <li>AWS Cloud Practitioner Essentials</li>
+                <li>AWS Certified Solutions Architect – CADDCAMM SOLUTIONS</li>
+                <li>Ultimate DevOps Project Implementation by Abhishek Veeramalla – Udemy</li>
+                <li>NPTEL Certification in Database Management Systems</li>
+                <li>NPTEL Certification in Cloud Computing</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Right Column -->
+          <div class="resume-col-right">
+            <section class="resume-sheet-section">
+              <h2 class="section-sheet-title">EXPERIENCE</h2>
+              <div class="experience-block-sheet">
+                <div class="exp-item-sheet">
+                  <div class="exp-title-sheet">
+                    <strong>EduReka</strong>
+                    <span class="date-sheet">Aug 2022 - Jan 2023</span>
+                  </div>
+                  <p class="role-sheet">AI/ML & Full Stack Developer Intern | Remote, India</p>
+                  <ul class="bullets-sheet">
+                    <li><strong>AI Powered Application Development:</strong> Developed an AI-powered web application using Python and Django for intelligent data processing and automation workflows.</li>
+                    <li><strong>Machine Learning Integration:</strong> Built and integrated machine learning models using Scikit-learn for predictive analytics and intelligent insights generation.</li>
+                    <li><strong>Backend & APIs:</strong> Designed scalable RESTful APIs and backend services to support efficient application architecture.</li>
+                    <li><strong>Cloud Deployment:</strong> Deployed applications on AWS using EC2 and S3 ensuring scalability, availability, and performance optimization.</li>
+                    <li><strong>Database & Auth:</strong> Implemented authentication modules and secure cloud database setups.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-sheet-section">
+              <h2 class="section-sheet-title">PROJECTS</h2>
+              <div class="projects-block-sheet">
+                <div class="proj-item-sheet">
+                  <strong>Meeting Summarizer – AI Powered Web Application</strong>
+                  <p class="tech-sheet">Tech: Python, Flask, NLP, REST APIs, Hugging Face APIs</p>
+                  <p>Built an AI-powered meeting summarization platform. Implemented REST APIs and authentication to process 500+ user inputs while reducing manual summarization effort by 60%.</p>
+                </div>
+                <div class="proj-item-sheet">
+                  <strong>Sahayak – Intelligent Learning Assistant</strong>
+                  <p class="tech-sheet">Tech: Python, Flask, NLP, Docker, AWS</p>
+                  <p>Developed a multilingual AI learning assistant for classrooms during Google Agentic AI Hackathon 2025. Designed NLP pipelines for quiz generation with Dockerized deployment on AWS.</p>
+                </div>
+                <div class="proj-item-sheet">
+                  <strong>Neuro Fusion – Brain Tumor Detection Platform</strong>
+                  <p class="tech-sheet">Tech: Python, CNN, Django, TensorFlow, Deep Learning</p>
+                  <p>Developed a CNN-based brain tumor detection system achieving 93% accuracy using MRI datasets. Integrated Django backend for prediction workflows and filed a patent.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="resume-sheet-section">
+              <h2 class="section-sheet-title">ACHIEVEMENTS</h2>
+              <ul class="achievements-list-sheet">
+                <li><strong>Google Agentic AI Hackathon 2025 Finalist:</strong> Developed "Sahayak" assistant for low-resource classroom environments.</li>
+                <li><strong>Open Source Contributor – GSSOC 2026:</strong> Contributed with 5+ merged pull requests.</li>
+                <li><strong>Best Paper Award:</strong> Received Best Paper Award at International Conference 2025 (Saveetha University) for the project "Neuro Fusion".</li>
+                <li><strong>Patent Filed:</strong> Patent filed: "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture".</li>
+                <li><strong>Problem Solving:</strong> Solving Data Structures and Algorithms problems on LeetCode.</li>
+              </ul>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="index.js"></script>
+</body>
+</html>
