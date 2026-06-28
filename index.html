@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M Dhevika | Portfolio | AI/ML & Full Stack Developer</title>
-  <meta name="description" content="Portfolio of M Dhevika, AI/ML & Full Stack Developer with AWS Cloud Solutions Architect certification. Finalist in Google Agentic AI Hackathon, patent holder, and GSSOC contributor.">
+  <title>Dhevika | AI/ML & Full Stack Developer</title>
+  <meta name="description" content="Portfolio of M Dhevika, AI/ML & Full Stack Developer. Retro terminal design themed with Space Mono and Great Vibes fonts. Finalist in Google Agentic AI Hackathon.">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Custom CSS -->
@@ -16,33 +16,32 @@
 </head>
 <body>
 
-  <!-- Dynamic Particles Canvas -->
-  <canvas id="particles-canvas"></canvas>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <span class="logo-accent">&lt;</span>Dhevika<span class="logo-accent"> /&gt;</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#timeline" class="nav-link">Timeline</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#achievements" class="nav-link">Achievements</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="btn btn-primary btn-sm resume-btn" onclick="openResumeModal()">
-          <i class="fa-solid fa-file-pdf"></i> Resume
-        </button>
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
+  <!-- Fullscreen Boot Sequence Overlay -->
+  <div id="boot-screen" class="boot-screen">
+    <div class="boot-loader-terminal">
+      <div id="boot-logs"></div>
     </div>
+  </div>
+
+  <!-- Navigation Bar (Top Right) -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#trophies" class="nav-link">Trophies</a></li>
+      <li><a href="#interests" class="nav-link">Interests</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+        <button class="btn btn-outline btn-sm resume-btn" onclick="openResumeModal()">
+          <i class="fa-solid fa-file-pdf"></i> RESUME.PDF
+        </button>
+      </li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </nav>
 
   <!-- Mobile Dropdown Menu -->
@@ -50,694 +49,560 @@
     <ul class="mobile-nav-links">
       <li><a href="#home" class="mobile-nav-link">Home</a></li>
       <li><a href="#about" class="mobile-nav-link">About</a></li>
-      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-      <li><a href="#timeline" class="mobile-nav-link">Timeline</a></li>
       <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-      <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#trophies" class="mobile-nav-link">Trophies</a></li>
+      <li><a href="#interests" class="mobile-nav-link">Interests</a></li>
       <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
       <li>
-        <button class="btn btn-primary btn-full resume-btn" onclick="openResumeModal()">
-          <i class="fa-solid fa-file-pdf"></i> View Resume
+        <button class="btn btn-outline btn-full resume-btn" onclick="openResumeModal()">
+          <i class="fa-solid fa-file-pdf"></i> View RESUME.PDF
         </button>
       </li>
     </ul>
   </div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
-    
-    <div class="container hero-container">
-      <div class="hero-content">
-        <div class="badge-glow">Ready to Innovate</div>
-        <h1 class="hero-title">
-          Hi, I'm <span class="text-gradient">M Dhevika</span>
-        </h1>
-        <h2 class="hero-subtitle">
-          I'm a <span id="typewriter" class="text-primary"></span><span class="cursor">|</span>
-        </h2>
-        <p class="hero-description">
-          An innovative AI/ML Engineer & Full Stack Developer specializing in bridging cognitive AI models with scalable, cloud-native backend infrastructures. Passionate about automated intelligence, deep learning, and cloud-native DevOps architectures.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary btn-lg">
-            Explore Work <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn-secondary btn-lg">
-            Let's Collaborate <i class="fa-solid fa-envelope"></i>
-          </a>
-        </div>
-      </div>
+  <!-- Left Sidebar (Desktop Fixed) -->
+  <aside class="sidebar">
+    <a href="#" class="logo">Dhevika</a>
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/dhevika-m-54636825a" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/DHEVIKA" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://leetcode.com/u/thedhevika/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+    </div>
+    <div class="section-number" id="sidebar-section-num">01</div>
+  </aside>
 
-      <div class="hero-card-container">
-        <div class="hero-profile-card tilt-element">
-          <div class="card-inner-glow"></div>
-          <div class="profile-header">
-            <div class="profile-avatar">
-              <i class="fa-solid fa-laptop-code"></i>
+  <!-- Right Scroll Tracker (Desktop Fixed) -->
+  <div class="scroll-indicator">
+    <span class="scroll-text">SCROLL</span>
+    <div class="scroll-line">
+      <div class="scroll-dot" id="scroll-dot"></div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main>
+    <!-- Hero Section (Section 01) -->
+    <section id="home" class="hero-section" data-sec="01">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="greeting">HELLO, WORLD. I AM</div>
+          <h1 class="hero-title">M Dhevika.</h1>
+          <h2 class="hero-subtitle">
+            <span id="typewriter"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-desc">
+            An AI/ML developer & full stack engineer specializing in training neural models and building scalable web backends. I bridge automated intelligence with cloud systems.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-outline">
+              [EXPLORE_WORK] <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn-link">[GET_IN_TOUCH]</a>
+          </div>
+        </div>
+
+        <!-- Right Side: Handwritten Signature + Live Hardwork Quote Mockup -->
+        <div class="hero-signature-box">
+          <div class="signature-glow-container">
+            <div class="signature-text">Dhevika M</div>
+          </div>
+          
+          <!-- Terminal Quote Widget -->
+          <div class="quote-terminal-widget">
+            <div class="widget-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="title">quote.sh --hardwork</span>
+              <button class="btn-reroll" onclick="selectRandomQuote()" title="Refresh Quote">
+                <i class="fa-solid fa-arrows-rotate"></i>
+              </button>
             </div>
-            <div class="profile-info">
-              <h3>M Dhevika</h3>
-              <p>Chennai, India</p>
-              <div class="social-pills">
-                <a href="https://linkedin.com/in/dhevika-m-54636825a" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/DHEVIKA" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://leetcode.com/u/thedhevika/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+            <div class="widget-body">
+              <div class="console-prompt">&gt; running random_quote_generator...</div>
+              <div class="quote-text" id="dynamic-quote">
+                <!-- Quote text injected via JS -->
+              </div>
+              <div class="quote-author" id="dynamic-author">
+                <!-- Author text injected via JS -->
+              </div>
+              <div class="visit-counter" id="visit-counter-text">
+                <!-- Visit counter stats injected via JS -->
               </div>
             </div>
           </div>
-          
-          <div class="profile-divider"></div>
-          
-          <div class="profile-stats">
-            <div class="stat-item">
-              <span class="stat-number" data-target="93">0</span><span class="stat-suffix">%</span>
-              <span class="stat-label">Model Accuracy</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="60">0</span><span class="stat-suffix">%</span>
-              <span class="stat-label">Effort Reduced</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-              <span class="stat-label">GSSOC PRs</span>
-            </div>
-          </div>
-          
-          <div class="profile-details">
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-graduation-cap"></i> B.Tech IT</span>
-              <span class="detail-value">Vel Tech (CGPA 8.4)</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-shield-halved"></i> Cloud</span>
-              <span class="detail-value">AWS Solutions Architect</span>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About / Stats Summary Section -->
-  <section id="about" class="about-section scroll-reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Professional Summary</h2>
-        <p class="section-subtitle">Blending AI Research with Practical Full-Stack Architectures</p>
-      </div>
-
+    <!-- About Section (Section 02) -->
+    <section id="about" class="about-section scroll-reveal" data-sec="02">
+      <div class="section-label">02 // PROFILE</div>
+      <h2 class="section-title">ABOUT ME.</h2>
+      
       <div class="about-grid">
-        <div class="about-text-card glass-panel">
-          <h3>Who I Am</h3>
-          <p>
-            I am a B.Tech Information Technology graduate (Class of 2025) with a strong foundation in software engineering and cloud deployment. My technical journey spans building advanced Deep Learning algorithms for healthcare, developing natural language processing agents for education, and architecting microservices that streamline manual business tasks.
+        <div class="about-content">
+          <p class="about-text">
+            I am a B.Tech Information Technology graduate (2021 - 2025) from Vel Tech Engineering College, Chennai (CGPA 8.4). My focus is at the intersection of machine learning systems, deep learning algorithms, and high-performance backends.
           </p>
-          <p>
-            I thrive in hackathons and open-source ecosystems, having been recognized as a finalist in the <strong>Google Agentic AI Hackathon 2025</strong> and actively contributing code to repositories via the <strong>GirlScript Summer of Code</strong>. My objective is to build intelligent web applications that are robust, highly performant, and seamlessly scalable on the cloud.
+          <p class="about-text">
+            My experience includes building deep convolutional neural networks for tumor detection (patent filed, international award winner), creating generative NLP pipelines for classroom aids (Google Agentic Hackathon finalist), and contributing to open-source codebases during the GirlScript Summer of Code (GSSOC 2026).
           </p>
-          <div class="quick-facts">
-            <div class="fact-item"><i class="fa-solid fa-lightbulb text-primary"></i> Patent Filed (Neuro Fusion)</div>
-            <div class="fact-item"><i class="fa-solid fa-trophy text-emerald"></i> Best Paper Award (Saveetha University)</div>
-            <div class="fact-item"><i class="fa-solid fa-cloud text-blue"></i> AWS Certified Professional</div>
-          </div>
-        </div>
-
-        <div class="about-highlights-grid">
-          <div class="highlight-card glass-panel text-center hover-glow">
-            <div class="highlight-icon icon-ai"><i class="fa-solid fa-brain"></i></div>
-            <h4>Artificial Intelligence</h4>
-            <p>Developing CNNs, NLP pipelines, and integrating Hugging Face model APIs into functional applications.</p>
-          </div>
-          <div class="highlight-card glass-panel text-center hover-glow">
-            <div class="highlight-icon icon-cloud"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-            <h4>DevOps & Cloud</h4>
-            <p>Architecting secure networks on AWS (VPC, EC2, S3, RDS) and orchestrating container environments using Docker.</p>
-          </div>
-          <div class="highlight-card glass-panel text-center hover-glow">
-            <div class="highlight-icon icon-code"><i class="fa-solid fa-server"></i></div>
-            <h4>Full-Stack Backend</h4>
-            <p>Designing REST APIs using Django and Flask, coupled with robust SQL databases (PostgreSQL, MySQL).</p>
-          </div>
-          <div class="highlight-card glass-panel text-center hover-glow">
-            <div class="highlight-icon icon-algo"><i class="fa-solid fa-diagram-project"></i></div>
-            <h4>System Architecture</h4>
-            <p>Applying advanced Object Oriented Programming concepts and Data Structures for optimized problem solving.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section scroll-reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Technical Expertise</h2>
-        <p class="section-subtitle">My toolbox for building scalable modern solutions</p>
-      </div>
-
-      <div class="skills-grid">
-        <!-- Programming Languages -->
-        <div class="skill-category-card glass-panel">
-          <div class="category-header">
-            <i class="fa-solid fa-code-branch text-primary"></i>
-            <h3>Languages</h3>
-          </div>
-          <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>C++</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
+          <div class="retro-stats-grid">
+            <div class="stat-card">
+              <div class="stat-num">93%</div>
+              <div class="stat-label">Model Accuracy</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Python</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
+            <div class="stat-card">
+              <div class="stat-num">60%</div>
+              <div class="stat-label">Manual Effort Saved</div>
             </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Java</span>
-                <span>75%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="75%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>SQL</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
+            <div class="stat-card">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">GSSOC Merge PRs</div>
             </div>
           </div>
         </div>
 
-        <!-- Frameworks & Libraries -->
-        <div class="skill-category-card glass-panel">
-          <div class="category-header">
-            <i class="fa-solid fa-cubes text-emerald"></i>
-            <h3>Frameworks & ML</h3>
-          </div>
-          <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Django & Flask</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>TensorFlow & Deep Learning</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Scikit-learn</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Pandas & NumPy</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cloud & DevOps -->
-        <div class="skill-category-card glass-panel">
-          <div class="category-header">
-            <i class="fa-solid fa-cloud-sun text-blue"></i>
-            <h3>Cloud & DevOps</h3>
-          </div>
-          <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>AWS Services (EC2, S3, RDS, VPC)</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Docker Containerization</span>
-                <span>75%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="75%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>CI/CD & DevOps (Udemy Certified)</span>
-                <span>70%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="70%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Git & Version Control</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Databases & Core Concepts -->
-        <div class="skill-category-card glass-panel">
-          <div class="category-header">
-            <i class="fa-solid fa-database text-purple"></i>
-            <h3>Databases & Concepts</h3>
-          </div>
-          <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>PostgreSQL & MySQL</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="85%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Data Structures & Algorithms</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>OOPs & System Design</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>REST APIs Integration</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-progress-bar"><div class="skill-progress" data-width="90%"></div></div>
-            </div>
+        <!-- Wavy design background and floating tags -->
+        <div class="about-decor">
+          <div class="wave-bg"></div>
+          <div class="floating-tags">
+            <span class="float-tag">Python</span>
+            <span class="float-tag">Django</span>
+            <span class="float-tag">AWS Cloud</span>
+            <span class="float-tag">TensorFlow</span>
+            <span class="float-tag">REST APIs</span>
+            <span class="float-tag">Docker</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience & Education Timeline Section -->
-  <section id="timeline" class="timeline-section scroll-reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Academic & Professional Journey</h2>
-        <p class="section-subtitle">A chronological track record of education and work experience</p>
-      </div>
-
-      <div class="timeline-tabs">
-        <button class="tab-btn active" onclick="switchTimeline('experience')">
-          <i class="fa-solid fa-briefcase"></i> Professional Experience
-        </button>
-        <button class="tab-btn" onclick="switchTimeline('education')">
-          <i class="fa-solid fa-graduation-cap"></i> Academic Education
-        </button>
-      </div>
-
-      <!-- Experience Timeline -->
-      <div class="timeline-container active" id="timeline-experience">
-        <div class="timeline-line"></div>
-        
-        <div class="timeline-item left scroll-reveal">
-          <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
-          <div class="timeline-card glass-panel hover-glow">
-            <div class="timeline-card-header">
-              <span class="timeline-date">Aug 2022 - Jan 2023</span>
-              <h3>AI/ML & Full Stack Developer Intern</h3>
-              <h4 class="company">EduReka <span class="badge">Remote</span></h4>
-            </div>
-            <div class="timeline-body">
-              <p>Designed and integrated intelligent features and backend APIs within a scalable web ecosystem.</p>
-              <ul>
-                <li><strong>AI Powered App Dev:</strong> Built Django systems for smart automation and data parsing.</li>
-                <li><strong>ML Integration:</strong> Deployed Scikit-learn predictive models to yield business insights.</li>
-                <li><strong>Cloud Deployment:</strong> Scaled infrastructure on AWS EC2 & S3, optimizing asset load speeds.</li>
-                <li><strong>RESTful Backend:</strong> Developed secure session management and database models.</li>
-              </ul>
-              <div class="tag-container">
-                <span class="tag">Django</span>
-                <span class="tag">Python</span>
-                <span class="tag">Scikit-learn</span>
-                <span class="tag">AWS</span>
-                <span class="tag">REST API</span>
-              </div>
-            </div>
-          </div>
+    <!-- Projects Section (Section 03) -->
+    <section id="projects" class="projects-section scroll-reveal" data-sec="03">
+      <div class="projects-header">
+        <div>
+          <div class="section-label">03 // PORTFOLIO</div>
+          <h2 class="section-title">PROJECTS.</h2>
         </div>
-
-        <div class="timeline-item right scroll-reveal">
-          <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
-          <div class="timeline-card glass-panel hover-glow">
-            <div class="timeline-card-header">
-              <span class="timeline-date">April 2026 - Present</span>
-              <h3>Open Source Developer</h3>
-              <h4 class="company">GirlScript Summer of Code (GSSOC 2026)</h4>
-            </div>
-            <div class="timeline-body">
-              <p>Contributing core codebase improvements to diverse open-source software projects.</p>
-              <ul>
-                <li>Collaborated on active repositories with 5+ merged pull requests addressing functional enhancements.</li>
-                <li>Participated in code reviews, optimizing algorithms, and documenting setup methodologies.</li>
-              </ul>
-              <div class="tag-container">
-                <span class="tag">Git</span>
-                <span class="tag">Open Source</span>
-                <span class="tag">Collaboration</span>
-                <span class="tag">Python</span>
-              </div>
-            </div>
-          </div>
+        <div class="project-tabs">
+          <button class="tab-btn active" onclick="filterProjects('all')">ALL</button>
+          <button class="tab-btn" onclick="filterProjects('ai-ml')">AI/ML</button>
+          <button class="tab-btn" onclick="filterProjects('cloud-backend')">CLOUD/WEB</button>
         </div>
-      </div>
-
-      <!-- Education Timeline -->
-      <div class="timeline-container" id="timeline-education">
-        <div class="timeline-line"></div>
-        
-        <div class="timeline-item left">
-          <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="timeline-card glass-panel hover-glow">
-            <div class="timeline-card-header">
-              <span class="timeline-date">2021 - 2025</span>
-              <h3>Bachelor of Technology - Information Technology</h3>
-              <h4 class="company">Vel Tech Dr. Rangarajan Dr. Sakunthala Engineering College</h4>
-            </div>
-            <div class="timeline-body">
-              <p>Core focus on foundational computer science elements, networks, and advanced scripting technologies.</p>
-              <p><strong>Cumulative CGPA:</strong> 8.4 / 10</p>
-              <div class="tag-container">
-                <span class="tag">Data Structures</span>
-                <span class="tag">Algorithms</span>
-                <span class="tag">Cloud Architecture</span>
-                <span class="tag">DBMS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item right">
-          <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
-          <div class="timeline-card glass-panel hover-glow">
-            <div class="timeline-card-header">
-              <span class="timeline-date">2021</span>
-              <h3>Higher Secondary Education (12th Grade)</h3>
-              <h4 class="company">St. Joseph's Girls' Hr. Sec School <span class="badge">Dindigul</span></h4>
-            </div>
-            <div class="timeline-body">
-              <p>Concentrated in Mathematics, Physics, Chemistry, and Computer Science.</p>
-              <p><strong>Percentage Achieved:</strong> 88.23%</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item left">
-          <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
-          <div class="timeline-card glass-panel hover-glow">
-            <div class="timeline-card-header">
-              <span class="timeline-date">2019</span>
-              <h3>Secondary School Education (10th Grade)</h3>
-              <h4 class="company">St. Joseph's Girls' Hr. Sec School <span class="badge">Dindigul</span></h4>
-            </div>
-            <div class="timeline-body">
-              <p>General secondary education board curriculum.</p>
-              <p><strong>Percentage Achieved:</strong> 89%</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section scroll-reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">Real-world systems engineered with advanced tech stacks</p>
       </div>
 
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card glass-panel tilt-element" onclick="openProjectModal('neuro-fusion')">
-          <div class="project-image-placeholder">
-            <i class="fa-solid fa-dna project-main-icon"></i>
-            <div class="project-glow-layer" style="background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);"></div>
-            <div class="project-badge"><i class="fa-solid fa-ribbon"></i> Patent & Award</div>
+        <article class="project-card" data-cat="ai-ml">
+          <span class="project-number">01</span>
+          <div class="project-icon"><i class="fa-solid fa-dna"></i></div>
+          <h3 class="project-title">NEURO FUSION</h3>
+          <p class="project-desc">A deep CNN platform detecting brain tumors with 93% accuracy on MRI datasets. Includes an administrative Django dashboard portal.</p>
+          <ul class="project-features">
+            <li>Patent filed: "Neuro Fusion: Brain Tumor Analysis"</li>
+            <li>Best Paper Award at International Conference 2025</li>
+            <li>Django backend integration for clinical scans pipeline</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">CNN</span>
           </div>
-          <div class="project-info">
-            <span class="project-category">Computer Vision / Healthcare</span>
-            <h3>Neuro Fusion</h3>
-            <p>Advancing Brain Tumor analysis with Deep CNNs. Achieved 93% accuracy on MRI datasets with a Django dashboard interface.</p>
-            <div class="project-tags">
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>Django</span>
-              <span>Deep Learning</span>
-            </div>
-            <span class="read-more">Learn details <i class="fa-solid fa-chevron-right"></i></span>
-          </div>
-        </div>
+          <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('neuro-fusion')">
+            [VIEW_DETAILS] <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </article>
 
         <!-- Project 2 -->
-        <div class="project-card glass-panel tilt-element" onclick="openProjectModal('sahayak')">
-          <div class="project-image-placeholder">
-            <i class="fa-solid fa-robot project-main-icon text-emerald"></i>
-            <div class="project-glow-layer" style="background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, transparent 70%);"></div>
-            <div class="project-badge badge-emerald"><i class="fa-solid fa-trophy"></i> Google Finalist</div>
+        <article class="project-card" data-cat="ai-ml">
+          <span class="project-number">02</span>
+          <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3 class="project-title">SAHAYAK</h3>
+          <p class="project-desc">Multilingual GenAI assistant generating quizzes and lecture breakdowns. Engineered during the Google Agentic AI Hackathon.</p>
+          <ul class="project-features">
+            <li>Google Agentic AI Hackathon 2025 Finalist</li>
+            <li>Interactive multilingual NLP pipelines</li>
+            <li>Docker containerization deployed on AWS ECS</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">AWS Cloud</span>
           </div>
-          <div class="project-info">
-            <span class="project-category">GenAI / EdTech</span>
-            <h3>Sahayak</h3>
-            <p>Multilingual learning assistant built during the Google Agentic AI Hackathon 2025. Generates automated school lessons and quizzes.</p>
-            <div class="project-tags">
-              <span>NLP</span>
-              <span>Flask</span>
-              <span>Docker</span>
-              <span>AWS</span>
-              <span>Python</span>
-            </div>
-            <span class="read-more">Learn details <i class="fa-solid fa-chevron-right"></i></span>
-          </div>
-        </div>
+          <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('sahayak')">
+            [VIEW_DETAILS] <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </article>
 
         <!-- Project 3 -->
-        <div class="project-card glass-panel tilt-element" onclick="openProjectModal('meeting-summarizer')">
-          <div class="project-image-placeholder">
-            <i class="fa-solid fa-list-check project-main-icon text-blue"></i>
-            <div class="project-glow-layer" style="background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);"></div>
-            <div class="project-badge badge-blue"><i class="fa-solid fa-bolt"></i> 60% Effort Save</div>
+        <article class="project-card" data-cat="cloud-backend">
+          <span class="project-number">03</span>
+          <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3 class="project-title">MEETING SUMMARIZER</h3>
+          <p class="project-desc">AI productivity workflow transcribing meeting audios and generating summaries via Hugging Face models APIs.</p>
+          <ul class="project-features">
+            <li>Reduces manual summary writing times by 60%</li>
+            <li>Served 500+ active user summaries</li>
+            <li>REST integration with secure authentication</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">Hugging Face</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">REST APIs</span>
           </div>
-          <div class="project-info">
-            <span class="project-category">NLP / Productivity</span>
-            <h3>Meeting Summarizer</h3>
-            <p>AI summarization tool processing 500+ users. Leveraged Hugging Face API pipelines with REST integration to shorten work schedules.</p>
-            <div class="project-tags">
-              <span>Hugging Face</span>
-              <span>Flask</span>
-              <span>NLP</span>
-              <span>REST APIs</span>
-            </div>
-            <span class="read-more">Learn details <i class="fa-solid fa-chevron-right"></i></span>
+          <a href="javascript:void(0)" class="project-link" onclick="openProjectModal('meeting-summarizer')">
+            [VIEW_DETAILS] <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills & Journey (Section 04) -->
+    <section id="skills" class="skills-section scroll-reveal" data-sec="04">
+      <div class="section-label">04 // CAPABILITIES</div>
+      <h2 class="section-title">SKILLS & EXPERIENCE.</h2>
+
+      <div class="skills-grid-terminal">
+        <!-- Box 1 -->
+        <div class="terminal-box">
+          <div class="box-header">&gt; languages.sh</div>
+          <div class="box-body">
+            <p>C++ <span class="dot-fill">........................</span> [85%]</p>
+            <p>Python <span class="dot-fill">.....................</span> [90%]</p>
+            <p>Java <span class="dot-fill">.......................</span> [75%]</p>
+            <p>SQL <span class="dot-fill">........................</span> [80%]</p>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="terminal-box">
+          <div class="box-header">&gt; framework_and_ml.sh</div>
+          <div class="box-body">
+            <p>Django & Flask <span class="dot-fill">................</span> [90%]</p>
+            <p>TensorFlow & CNNs <span class="dot-fill">..............</span> [85%]</p>
+            <p>Scikit-learn <span class="dot-fill">..................</span> [80%]</p>
+            <p>Pandas & NumPy <span class="dot-fill">................</span> [85%]</p>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="terminal-box">
+          <div class="box-header">&gt; cloud_and_devops.sh</div>
+          <div class="box-body">
+            <p>AWS Cloud Services <span class="dot-fill">...........</span> [90%]</p>
+            <p>Docker Containers <span class="dot-fill">.............</span> [75%]</p>
+            <p>Linux / Shell Scripting <span class="dot-fill">........</span> [80%]</p>
+            <p>Git Version Control <span class="dot-fill">..........</span> [85%]</p>
+            <p>CI/CD Pipelines <span class="dot-fill">................</span> [70%]</p>
+          </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="terminal-box">
+          <div class="box-header">&gt; core_engineering.sh</div>
+          <div class="box-body">
+            <p>Data Structures <span class="dot-fill">..............</span> [80%]</p>
+            <p>REST APIs Integration <span class="dot-fill">........</span> [90%]</p>
+            <p>OOPs Principles <span class="dot-fill">..............</span> [80%]</p>
+            <p>System Design <span class="dot-fill">.................</span> [75%]</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Achievements & Certifications Section -->
-  <section id="achievements" class="achievements-section scroll-reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Certifications & Achievements</h2>
-        <p class="section-subtitle">Validating knowledge and architectural excellence</p>
-      </div>
-
-      <div class="achievements-grid">
-        <!-- Google Agentic Hackathon -->
-        <div class="achievement-card glass-panel hover-glow">
-          <div class="achievement-header">
-            <div class="achievement-icon icon-gold"><i class="fa-solid fa-trophy"></i></div>
-            <div class="achievement-meta">
-              <h4>Hackathon Finalist</h4>
-              <span class="issuer">Google Agentic AI Hackathon 2025</span>
-            </div>
+      <!-- Experience & Achievements Outline -->
+      <div class="timeline-console">
+        <div class="console-tab-header">JOURNEY_LOG.LOG</div>
+        <div class="console-tab-body">
+          <div class="log-entry">
+            <span class="log-date">[AUG 2022 - JAN 2023]</span>
+            <span class="log-type">[EXPERIENCE]</span>
+            <span class="log-text">AI/ML & Full Stack Intern at EduReka. Built python automation features, trained Scikit-learn systems, and deployed modules onto AWS EC2/S3 containers.</span>
           </div>
-          <p>Led "Sahayak" project to the final rounds of the Google Hackathon, prototyping conversational learning systems for remote classes.</p>
-        </div>
-
-        <!-- Best Paper Award -->
-        <div class="achievement-card glass-panel hover-glow">
-          <div class="achievement-header">
-            <div class="achievement-icon icon-gold"><i class="fa-solid fa-award"></i></div>
-            <div class="achievement-meta">
-              <h4>Best Paper Award</h4>
-              <span class="issuer">Saveetha University (IC 2025)</span>
-            </div>
+          <div class="log-entry">
+            <span class="log-date">[APRIL 2026 - PRESENT]</span>
+            <span class="log-type">[EXPERIENCE]</span>
+            <span class="log-text">Open Source Contributor – GirlScript Summer of Code (GSSOC 2026). Addressing functional algorithm tickets with 5+ merged pull requests.</span>
           </div>
-          <p>Awarded Best Scientific Paper for "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture" at Saveetha University's International Conference.</p>
-        </div>
-
-        <!-- AWS Solutions Architect -->
-        <div class="achievement-card glass-panel hover-glow">
-          <div class="achievement-header">
-            <div class="achievement-icon icon-aws"><i class="fa-brands fa-aws"></i></div>
-            <div class="achievement-meta">
-              <h4>AWS Solutions Architect</h4>
-              <span class="issuer">CADDCAMM SOLUTIONS</span>
-            </div>
+          <div class="log-entry">
+            <span class="log-date">[2021 - 2025]</span>
+            <span class="log-type">[EDUCATION]</span>
+            <span class="log-text">Bachelor of Technology in Information Technology at Vel Tech College, Chennai (CGPA 8.4/10).</span>
           </div>
-          <p>Certified in architecting robust, secure, and decoupled services utilizing standard AWS Cloud patterns (VPC, IAM, SNS, RDS).</p>
-        </div>
-
-        <!-- AWS Cloud Practitioner -->
-        <div class="achievement-card glass-panel hover-glow">
-          <div class="achievement-header">
-            <div class="achievement-icon icon-aws"><i class="fa-brands fa-aws"></i></div>
-            <div class="achievement-meta">
-              <h4>AWS Cloud Practitioner</h4>
-              <span class="issuer">Amazon Web Services</span>
-            </div>
+          <div class="log-entry">
+            <span class="log-date">[2021]</span>
+            <span class="log-type">[EDUCATION]</span>
+            <span class="log-text">Higher Secondary Certificate (12th Grade) at St. Joseph's Girls' Hr. Sec School, Dindigul (88.23%).</span>
           </div>
-          <p>Certified in cloud concepts, core security pillars, pricing guidelines, and overall platform infrastructures.</p>
-        </div>
-
-        <!-- DevOps Certification -->
-        <div class="achievement-card glass-panel hover-glow">
-          <div class="achievement-header">
-            <div class="achievement-icon icon-devops"><i class="fa-solid fa-infinity"></i></div>
-            <div class="achievement-meta">
-              <h4>DevOps Implementation</h4>
-              <span class="issuer">Udemy (Abhishek Veeramalla)</span>
-            </div>
+          <div class="log-entry">
+            <span class="log-date">[2019]</span>
+            <span class="log-type">[EDUCATION]</span>
+            <span class="log-text">Secondary School Certificate (10th Grade) at St. Joseph's Girls' Hr. Sec School, Dindigul (89%).</span>
           </div>
-          <p>Deep-dive training covering Docker containerization, Kubernetes clusters, Jenkins pipelines, and Ansible scripts.</p>
-        </div>
-
-        <!-- Patent Filed -->
-        <div class="achievement-card glass-panel hover-glow">
-          <div class="achievement-header">
-            <div class="achievement-icon icon-patent"><i class="fa-solid fa-stamp"></i></div>
-            <div class="achievement-meta">
-              <h4>Patent Filed</h4>
-              <span class="issuer">Indian Patent Office</span>
-            </div>
-          </div>
-          <p>Officially filed patent on healthcare machine learning pipeline titled: "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture".</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section scroll-reveal">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">Let's build something exceptional together</p>
+    <!-- Trophy Showcase Section (Section 05) -->
+    <section id="trophies" class="trophies-section scroll-reveal" data-sec="05">
+      <div class="section-label">05 // HALL OF FAME</div>
+      <h2 class="section-title">TROPHIES & AWARDS.</h2>
+
+      <div class="trophy-showcase">
+        <!-- Trophy 1 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrap gold">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="trophy-content">
+            <h4>GOOGLE AGENTIC AI HACKATHON</h4>
+            <span class="trophy-year">2025</span>
+            <p>Finalist — Led "Sahayak" project among hundreds of teams, building conversational learning systems for remote classrooms.</p>
+          </div>
+        </div>
+
+        <!-- Trophy 2 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrap gold">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="trophy-content">
+            <h4>BEST PAPER AWARD</h4>
+            <span class="trophy-year">IC 2025 — Saveetha University</span>
+            <p>Awarded Best Scientific Paper for "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture" at the International Conference.</p>
+          </div>
+        </div>
+
+        <!-- Trophy 3 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrap patent">
+            <i class="fa-solid fa-stamp"></i>
+          </div>
+          <div class="trophy-content">
+            <h4>PATENT FILED</h4>
+            <span class="trophy-year">Indian Patent Office</span>
+            <p>Official patent filed on healthcare ML pipeline: "Neuro Fusion: Advancing Brain Tumor Analysis using CNN Architecture".</p>
+          </div>
+        </div>
+
+        <!-- Trophy 4 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrap aws">
+            <i class="fa-brands fa-aws"></i>
+          </div>
+          <div class="trophy-content">
+            <h4>AWS SOLUTIONS ARCHITECT</h4>
+            <span class="trophy-year">CADDCAMM Solutions</span>
+            <p>Certified in architecting secure, decoupled cloud services — VPC, IAM, SNS, RDS, and microservice patterns.</p>
+          </div>
+        </div>
+
+        <!-- Trophy 5 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrap aws">
+            <i class="fa-brands fa-aws"></i>
+          </div>
+          <div class="trophy-content">
+            <h4>AWS CLOUD PRACTITIONER</h4>
+            <span class="trophy-year">Amazon Web Services</span>
+            <p>Certified in cloud concepts, core security pillars, pricing guidelines, and platform architectures.</p>
+          </div>
+        </div>
+
+        <!-- Trophy 6 -->
+        <div class="trophy-card">
+          <div class="trophy-icon-wrap oss">
+            <i class="fa-solid fa-code-merge"></i>
+          </div>
+          <div class="trophy-content">
+            <h4>GSSOC 2026 CONTRIBUTOR</h4>
+            <span class="trophy-year">GirlScript Summer of Code</span>
+            <p>Active open-source developer with 5+ merged pull requests across multiple community repositories.</p>
+          </div>
+        </div>
       </div>
+
+      </div>
+    </section>
+
+    <!-- Interests & Hobbies Section (Section 06) -->
+    <section id="interests" class="interests-section scroll-reveal" data-sec="06">
+      <div class="section-label">06 // RECREATION</div>
+      <h2 class="section-title">BEYOND THE CODE.</h2>
+
+      <div class="hobbies-grid">
+        <!-- Badminton -->
+        <div class="hobby-card">
+          <div class="hobby-icon-ascii">
+            <pre class="ascii-art">
+   _
+  (_)
+  | |
+  | |
+  |_|
+(_____)
+            </pre>
+            <i class="fa-solid fa-table-tennis-paddle-ball hobby-icon"></i>
+          </div>
+          <div class="hobby-info">
+            <h4>BADMINTON</h4>
+            <div class="hobby-terminal-stats">
+              <span class="stat-lbl">PASSION_LEVEL:</span>
+              <div class="hobby-bar">
+                <div class="hobby-fill" style="--fill-width: 85%"></div>
+              </div>
+              <span class="stat-pct">[85%]</span>
+            </div>
+            <p>Active court matches and swift rallies. The shuttlecock flight is the ultimate physical compile-and-run sequence.</p>
+          </div>
+        </div>
+
+        <!-- Singing -->
+        <div class="hobby-card">
+          <div class="hobby-icon-ascii">
+            <pre class="ascii-art">
+   /\
+  /  \
+ | () |
+  \  /
+   ||
+   ||
+  ====
+            </pre>
+            <i class="fa-solid fa-microphone-lines hobby-icon"></i>
+          </div>
+          <div class="hobby-info">
+            <h4>SINGING</h4>
+            <div class="hobby-terminal-stats">
+              <span class="stat-lbl">PASSION_LEVEL:</span>
+              <div class="hobby-bar">
+                <div class="hobby-fill" style="--fill-width: 75%"></div>
+              </div>
+              <span class="stat-pct">[75%]</span>
+            </div>
+            <p>Acoustics and vocal tracks. Expressing rhythms and harmonies is how I debug my mind between system compilations.</p>
+          </div>
+        </div>
+
+        <!-- Sketching -->
+        <div class="hobby-card">
+          <div class="hobby-icon-ascii">
+            <pre class="ascii-art">
+     /|
+    / |
+   /  |
+  /   |
+ /____|
+|     |
+|_____|
+            </pre>
+            <i class="fa-solid fa-paintbrush hobby-icon"></i>
+          </div>
+          <div class="hobby-info">
+            <h4>SKETCHING</h4>
+            <div class="hobby-terminal-stats">
+              <span class="stat-lbl">PASSION_LEVEL:</span>
+              <div class="hobby-bar">
+                <div class="hobby-fill" style="--fill-width: 80%"></div>
+              </div>
+              <span class="stat-pct">[80%]</span>
+            </div>
+            <p>Pencils and textures. Rendering perspective and wireframes in real life. Aligning pixels manually on paper sketches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (Section 07) -->
+    <section id="contact" class="contact-section scroll-reveal" data-sec="07">
+      <div class="section-label">07 // NETWORKING</div>
+      <h2 class="section-title">GET IN TOUCH.</h2>
 
       <div class="contact-grid">
-        <!-- Contact Information -->
-        <div class="contact-info-card glass-panel">
-          <h3>Contact Details</h3>
-          <p>Feel free to reach out to discuss job roles, collaborations, research projects, or open-source issues!</p>
+        <div class="contact-terminal-info">
+          <h3>SYSTEM_INFO.TXT</h3>
+          <p>You can establish a connection with Dhevika M via the following endpoints:</p>
           
-          <div class="contact-methods">
-            <div class="method-item">
-              <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="method-content">
-                <span>Email</span>
-                <a href="mailto:dhevika0608@gmail.com">dhevika0608@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="method-item">
-              <div class="method-icon"><i class="fa-solid fa-mobile-screen"></i></div>
-              <div class="method-content">
-                <span>Mobile</span>
-                <a href="tel:+918248635463">+91 82486 35463</a>
-              </div>
-            </div>
-
-            <div class="method-item">
-              <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="method-content">
-                <span>Location</span>
-                <span>Chennai, Tamil Nadu, India</span>
-              </div>
-            </div>
+          <div class="console-list">
+            <p><span>&gt; EMAIL:</span> <a href="mailto:dhevika0608@gmail.com">dhevika0608@gmail.com</a></p>
+            <p><span>&gt; PHONE:</span> <a href="tel:+918248635463">+91 82486 35463</a></p>
+            <p><span>&gt; ADDRESS:</span> Chennai, Tamil Nadu, India</p>
           </div>
-
+          
           <div class="profile-divider"></div>
-
-          <h3>Coding Profiles</h3>
+          
+          <h3>SOCIALS</h3>
           <div class="coding-pills">
-            <a href="https://github.com/DHEVIKA" target="_blank" class="coding-pill"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://linkedin.com/in/dhevika-m-54636825a" target="_blank" class="coding-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a href="https://leetcode.com/u/thedhevika/" target="_blank" class="coding-pill"><i class="fa-solid fa-code"></i> LeetCode</a>
+            <a href="https://github.com/DHEVIKA" target="_blank" class="coding-pill">[GITHUB]</a>
+            <a href="https://linkedin.com/in/dhevika-m-54636825a" target="_blank" class="coding-pill">[LINKEDIN]</a>
+            <a href="https://leetcode.com/u/thedhevika/" target="_blank" class="coding-pill">[LEETCODE]</a>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form-card glass-panel">
-          <h3>Send Message</h3>
+        <div class="contact-console-form">
+          <h3>CONNECT.EXE</h3>
           <form id="contact-form" onsubmit="handleFormSubmit(event)">
-            <div class="form-group">
-              <input type="text" id="name" required placeholder=" ">
-              <label for="name">Your Name</label>
+            <div class="form-group-terminal">
+              <span class="prompt">dhevika@portfolio:~$ name --set=</span>
+              <input type="text" id="name" required placeholder="...">
             </div>
             
-            <div class="form-group">
-              <input type="email" id="email" required placeholder=" ">
-              <label for="email">Your Email</label>
+            <div class="form-group-terminal">
+              <span class="prompt">dhevika@portfolio:~$ email --set=</span>
+              <input type="email" id="email" required placeholder="...">
             </div>
 
-            <div class="form-group">
-              <input type="text" id="subject" required placeholder=" ">
-              <label for="subject">Subject</label>
+            <div class="form-group-terminal">
+              <span class="prompt">dhevika@portfolio:~$ subject --set=</span>
+              <input type="text" id="subject" required placeholder="...">
             </div>
 
-            <div class="form-group">
-              <textarea id="message" rows="5" required placeholder=" "></textarea>
-              <label for="message">Message</label>
+            <div class="form-group-terminal message-field">
+              <span class="prompt">dhevika@portfolio:~$ message --set=</span>
+              <textarea id="message" rows="4" required placeholder="Type message..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-full">
-              Send message <i class="fa-solid fa-paper-plane"></i>
+            <button type="submit" class="btn btn-outline btn-full">
+              [TRANSMIT_MESSAGE] <i class="fa-solid fa-paper-plane"></i>
             </button>
             <div id="form-status" class="form-status"></div>
           </form>
         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kindness Quotes Console Section -->
+    <div class="kindness-banner scroll-reveal container">
+      <div class="kindness-header">
+        <span class="dot red" style="background:#ef4444;"></span>
+        <span class="dot yellow" style="background:#f59e0b;"></span>
+        <span class="dot green" style="background:#10b981;"></span>
+        <span class="title">kindness.sh --run | quote_of_the_visit</span>
+      </div>
+      <div class="kindness-body">
+        <span class="console-prompt">&gt; executing kindness_loader.sh...</span>
+        <p class="kindness-text" id="kindness-quote-text"></p>
+        <p class="kindness-author" id="kindness-quote-author"></p>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-container">
-      <p>&copy; 2026 M Dhevika. All rights reserved.</p>
+    <div class="footer-container">
+      <p>Dhevika M. Terminal Portfolio v2.0 // Est. 2026</p>
       <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#home">[HOME]</a>
+        <a href="#about">[ABOUT]</a>
+        <a href="#projects">[PROJECTS]</a>
+        <a href="#skills">[SKILLS]</a>
       </div>
     </div>
   </footer>
@@ -748,12 +613,12 @@
     <div class="modal-content glass-panel scrollbar-styled">
       <button class="modal-close" onclick="closeProjectModal()">&times;</button>
       <div id="modal-project-details">
-        <!-- Content dynamically injected via JS -->
+        <!-- Content injected dynamically -->
       </div>
     </div>
   </div>
 
-  <!-- Interactive & Printable Resume Modal -->
+  <!-- Resume Modal -->
   <div class="modal" id="resume-modal">
     <div class="modal-overlay" onclick="closeResumeModal()"></div>
     <div class="modal-content resume-modal-content glass-panel scrollbar-styled">
@@ -761,10 +626,10 @@
       
       <!-- Resume Header Actions -->
       <div class="resume-actions no-print">
-        <h3>Curriculum Vitae</h3>
+        <h3>RESUME.PDF</h3>
         <div class="action-buttons">
-          <button class="btn btn-primary btn-sm" onclick="printResume()">
-            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          <button class="btn btn-outline btn-sm" onclick="printResume()">
+            <i class="fa-solid fa-file-pdf"></i> SAVE AS PDF / PRINT
           </button>
         </div>
       </div>
@@ -796,6 +661,7 @@
                 <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
                 <p><strong>Cloud Technologies:</strong> AWS (EC2, S3, VPC, RDS, SNS)</p>
                 <p><strong>Core Concepts:</strong> Data Structures & Algorithms, Object Oriented Programming, REST APIs, System Design, Git, Docker</p>
+                <p><strong>Operating Systems:</strong> Linux (Ubuntu, Shell Scripting), Windows</p>
               </div>
             </section>
 
